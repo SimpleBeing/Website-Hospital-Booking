@@ -7,14 +7,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class About : Page
+public partial class ScheduleAppointment: Page
 {
     SqlConnection sConn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=True;AttachDbFilename=|DataDirectory|\dbAppointments.mdf;");
     protected void Page_Load(object sender, EventArgs e)
     {
-        consultationStartTimes();
+        ConsultationStartTimes();
     }
-    public void consultationStartTimes()
+    public void ConsultationStartTimes()
     {
         int x;
         string[] arrConStartTimes = {/*1*/"9:00",/*2*/ "9:30",/*3*/ "10:00",/*4*/ "10:30",/*5*/ "11:00",
@@ -72,7 +72,7 @@ public partial class About : Page
             }
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Display_Click(object sender, EventArgs e)
     {
         try
         {
@@ -97,7 +97,7 @@ public partial class About : Page
         }
     }
 
-    protected void btnBook_Click(object sender, EventArgs e)
+    protected void BtnBook_Click(object sender, EventArgs e)
     {
         if (ddlAppTime.Text.Equals("Unavaliable") == false)
         {
@@ -117,6 +117,6 @@ public partial class About : Page
 
     protected void CalDate_SelectionChanged(object sender, EventArgs e)
     {
-        consultationStartTimes();
+        ConsultationStartTimes();
     }
 }

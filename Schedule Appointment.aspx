@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Schedule Appointment.aspx.cs" Inherits="About" %>
+﻿<%@ Page Title="Schedule AppointmentSchedule Appointment" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Schedule Appointment.aspx.cs" Inherits="ScheduleAppointment" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
@@ -6,7 +6,7 @@
     <h3>
         <asp:Label ID="lblError" runat="server"></asp:Label></h3>
     <p>
-        <asp:Button ID="btnViewAllAppointments" runat="server" Text="View All Apointments" OnClick="Button1_Click" /></p>
+        <asp:Button ID="btnViewAllAppointments" runat="server" Text="View All Apointments" OnClick="Display_Click" /></p>
     <p>
         <asp:GridView ID="gvBookings" runat="server">
         </asp:GridView>
@@ -33,6 +33,6 @@
         </asp:DropDownList>
     </p>
     <p>
-        <asp:Button ID="btnBook" runat="server" OnClick="btnBook_Click" Text="Book" />
+        <asp:Button ID="btnBook" runat="server" OnClick="BtnBook_Click" Text="Book" />
     </p>
 </asp:Content>
